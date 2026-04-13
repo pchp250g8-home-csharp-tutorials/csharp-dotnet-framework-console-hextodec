@@ -20,7 +20,7 @@ The program does the following:
              The formula used is: character code - character code "a" + 10 
              (or the number 97 is subtracted from the character code then the number 10 is added). 
              Moreover, the calculation starts from the end of the line.
-      5.2.2. The resulting value is multiplied by a power of eight.
+      5.2.2. The resulting value is multiplied by a power of sixteen.
       5.2.3. The value obtained in the previous step is added to the decimal number variable.
       5.2.4. The variable of the factor of power 16 is multiplied by 16, since the number is hexadecimal.
     5.3. The value of the loop parameter is compared with the final value. If it is less, the loop continues. Otherwise, it terminates.
