@@ -12,18 +12,18 @@ namespace HexToDec
         static void Main(string[] args)
         {
             const uint MAX_INT = uint.MaxValue;
-            var nDecNum = 0;
-            var nHexPower = 1;
-            var nMaxHexLen = Math.Truncate(Math.Log(MAX_INT, 16));
+            var nDecNum = 0L;
+            var nHexPower = 1L;
+            var nMaxHexLen = Math.Ceiling(Math.Log(MAX_INT, 16));
             var oRegEx = new Regex("^[0-9A-Fa-f]+$");
-            Console.WriteLine("Input a hexademical number");
+            Console.WriteLine("Input a hexadecimal number");
             var strLine = Console.ReadLine();
             var nStrLen = strLine.Length;
             var bIsMatch = oRegEx.IsMatch(strLine);
             var bRightString = (nStrLen <= nMaxHexLen) && (bIsMatch);
             if (!bRightString)
             {
-                Console.WriteLine("Wrong hexademical number format!!!");
+                Console.WriteLine("Wrong hexadecimal number format!!!");
                 Console.Read();
                 return;
             }
@@ -40,7 +40,7 @@ namespace HexToDec
                 nDecNum += (nHexDigit * nHexPower);
                 nHexPower *= 16;
             }
-            Console.WriteLine("The decimal equivalent of the hexademical number {0} is {1}", strLine, nDecNum);
+            Console.WriteLine("The decimal equivalent of the hexadecimal number {0} is {1}", strLine, nDecNum);
             Console.Read();
         }
     }
